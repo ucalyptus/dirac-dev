@@ -20,8 +20,8 @@ def keyword_extraction(tfidf_vector,document_list):
         keywords.append(top_n)
     return keywords
 
-
-d=open("report4.txt","r",encoding='utf8')
+fileName = "report4.txt"
+d=open(fileName,"r",encoding='utf8')
 document=d.read()
 document_list=document.split("\n\n")
 tfidf_vector=TfidfVectorizer(stop_words='english',ngram_range=(1,3))
